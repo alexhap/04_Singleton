@@ -1,6 +1,6 @@
 /**
  * Created by alex on 18.06.2015.
- *
+ * for education purposes only :)
  */
 
 public class ChokolateBoiler {
@@ -23,6 +23,7 @@ public class ChokolateBoiler {
             System.out.println("boil!!! boiled = " + isBoiled());
         }
     }
+
     public void fill() {
         if (isEmpty()) {
             empty = false;
@@ -30,14 +31,21 @@ public class ChokolateBoiler {
             System.out.printf("fill!!! boiled = %b\tempty = %b\n", isBoiled(), isEmpty());
         }
     }
+
     public void drain() {
         if (!isEmpty() && isBoiled()) {
             empty = true;
             System.out.println("drain!!! empty = " + isEmpty());
         }
     }
-    public boolean isEmpty() { return empty; }
-    public boolean isBoiled() { return boiled; }
+
+    public boolean isEmpty() {
+        return empty;
+    }
+
+    public boolean isBoiled() {
+        return boiled;
+    }
 
     public static void main(String args[]) {
         ChokolateBoiler.getInstance().drain();
